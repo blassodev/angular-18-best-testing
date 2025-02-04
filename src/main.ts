@@ -1,7 +1,6 @@
 import { Component, importProvidersFrom, inject } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import 'zone.js';
-import { MyInputComponent } from './my-input-component/my-input.component';
 import { FormsModule } from '@angular/forms';
 import {
   Observable,
@@ -63,7 +62,7 @@ export const booksReducer = createReducer(
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [MyInputComponent, FormsModule],
+  imports: [FormsModule],
   template: ``,
 })
 export class App {
