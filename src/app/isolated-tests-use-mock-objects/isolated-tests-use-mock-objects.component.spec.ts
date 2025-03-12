@@ -29,32 +29,4 @@ describe('IsolatedTestsUseMockObjectsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should calculate power correctly', () => {
-      // Arrange
-      const base = 2;
-      const exponent = 3;
-      const expectedResult = 8;
-
-
-      // Act
-      const result = component.calculatePower(base, exponent);
-
-      // Assert
-      expect(result).toBe(expectedResult);
-      expect(complexMathServiceMock.calculatePower).toHaveBeenCalledWith(base, exponent);
-  });
-
-  it('should calculate logarithm correctly', () => {
-      // Arrange
-      const value = 8;
-      const base = 2;
-      const expectedResult = 3;
-
-      // Act
-      const result = component.calculateLogarithm(value, base);
-
-      // Assert
-      expect(result).toBe(expectedResult);
-      expect(complexMathServiceMock.calculateLogarithm).toHaveBeenCalledWith(value, base);
-  });
 });

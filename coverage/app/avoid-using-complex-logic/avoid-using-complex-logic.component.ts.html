@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95.45% </span>
+                <span class="strong">31.81% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>21/22</span>
+                <span class='fraction'>7/22</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.88% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/9</span>
+                <span class='fraction'>0/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">12.5% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>1/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.73% </span>
+                <span class="strong">31.57% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>18/19</span>
+                <span class='fraction'>6/19</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -117,38 +117,38 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {Component, computed, signal} from '@angular/core';
@@ -166,33 +166,33 @@ export class AvoidUsingComplexLogicComponent {
   operation = signal&lt;string&gt;('add');
   history = signal&lt;string[]&gt;([]);
 &nbsp;
-  result = computed(() =&gt; {
-    switch (this.operation()) {
+  result = computed(<span class="fstat-no" title="function not covered" >() =</span>&gt; {
+<span class="cstat-no" title="statement not covered" >    switch (this.operation()) {</span>
       case 'add':
-        return this.num1() + this.num2();
+<span class="cstat-no" title="statement not covered" >        return this.num1() + this.num2();</span>
       case 'subtract':
-        return this.num1() - this.num2();
+<span class="cstat-no" title="statement not covered" >        return this.num1() - this.num2();</span>
       case 'multiply':
-        return this.num1() * this.num2();
+<span class="cstat-no" title="statement not covered" >        return this.num1() * this.num2();</span>
       case 'divide':
-        return this.num2() !== 0 ? this.num1() / this.num2() : 'Cannot divide by 0';
-<span class="branch-4 cbranch-no" title="branch not covered" >      default:</span>
+<span class="cstat-no" title="statement not covered" >        return this.num2() !== 0 ? this.num1() / this.num2() : 'Cannot divide by 0';</span>
+      default:
 <span class="cstat-no" title="statement not covered" >        return 0;</span>
     }
   });
 &nbsp;
-  calculateToHistory() {
-    this.history.update(result =&gt; [...result, `${this.num1()} ${this.operation()} ${this.num2()} = ${this.result()}`]);
-    return this.result()
+<span class="fstat-no" title="function not covered" >  calculateToHistory(</span>) {
+<span class="cstat-no" title="statement not covered" >    this.history.update(<span class="fstat-no" title="function not covered" >result </span>=&gt; <span class="cstat-no" title="statement not covered" >[...result, `${this.num1()} ${this.operation()} ${this.num2()} = ${this.result()}`])</span>;</span>
+<span class="cstat-no" title="statement not covered" >    return this.result()</span>
   }
 &nbsp;
-  getAverageResult() {
-    const numericResults = this.history().map(result =&gt; {
-      const parts = result.split(' = '); // ["5 + 3", "8"]
-      return parseFloat(parts[1]);
-    }).filter(result =&gt; !isNaN(result));
+<span class="fstat-no" title="function not covered" >  getAverageResult(</span>) {
+    const numericResults = <span class="cstat-no" title="statement not covered" >this.history().map(<span class="fstat-no" title="function not covered" >result </span>=&gt; {</span>
+      const parts = <span class="cstat-no" title="statement not covered" >result.split(' = ');</span> // ["5 + 3", "8"]
+<span class="cstat-no" title="statement not covered" >      return parseFloat(parts[1]);</span>
+    }).filter(<span class="fstat-no" title="function not covered" >result </span>=&gt; <span class="cstat-no" title="statement not covered" >!isNaN(result))</span>;
 &nbsp;
-    return numericResults.length === 0 ? 0 : numericResults.reduce((sum, result) =&gt; sum + result, 0) / numericResults.length;
+<span class="cstat-no" title="statement not covered" >    return numericResults.length === 0 ? 0 : numericResults.reduce(<span class="fstat-no" title="function not covered" >(s</span>um, result) =&gt; <span class="cstat-no" title="statement not covered" >sum + result,</span> 0) / numericResults.length;</span>
   }
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -202,7 +202,7 @@ export class AvoidUsingComplexLogicComponent {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-02-04T15:37:02.295Z
+                at 2025-03-12T12:29:32.897Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
