@@ -15,6 +15,8 @@ export class AvoidMagicStringsComponent {
   operation = signal<Operation>(Operation.ADD);
   history = signal<string[]>([]);
 
+  resultCalculate: number | string = 0;
+
   private complexMathService = inject(ComplexMathService);
 
   result = computed(() => {
@@ -31,6 +33,23 @@ export class AvoidMagicStringsComponent {
         return 0;
     }
   });
+
+  calculate() {
+    switch (this.operation()) {
+      case 'add':
+        this.resultCalculate = this.num1() + this.num2();
+        break;
+      case 'subtract':
+        this.resultCalculate = this.num1() - this.num2();
+        break;
+      case 'multiply':
+        this.resultCalculate = this.num1() * this.num2();
+        break;
+      case 'divide':
+        this.resultCalculate = this.num2() !== 0 ? this.num1() / this.num2() : DIVISION_BY_ZERO_MESSAGE;
+        break;
+    }
+  }
 
   calculateToHistory() {
     this.history.update(result => [...result, `${this.num1()} ${this.operation()} ${this.num2()} = ${this.result()}`]);
